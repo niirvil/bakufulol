@@ -1,69 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <title>Bakufu</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevent scrollbars */
-            font-family: sans-serif;
-            /* background-color: black; /*fallback background*/ */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <title>Bakufu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white; /* Text color */
-            text-align: center;
-        }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+    }
 
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-        #background-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Cover the entire viewport */
-            z-index: -1; /* Behind the text */
-        }
+    #background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-        #content {
-            font-size: 4vw; /* Responsive font size */
-            font-family: "Pixelify Sans", sans-serif;
-            font-weight: 400;
-            font-style: normal; 
-            line-height: 1; /* Adjust line height for better appearance */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add text shadow for readability */
-        }
+    #content {
+      font-size: 4vw;
+      font-family: "Pixelify Sans", sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      line-height: 1.2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
 
-        @media (max-width: 768px) {
-            #content {
-                font-size: 12vw; /* Adjust font size for smaller screens */
-            }
-        }
-    </style>
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons img {
+      width: 52px;
+      height: 52px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      #content {
+        font-size: 10vw;
+        padding: 1rem;
+      }
+
+      .social-icons img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <img id="background-image" src="woods.jpg" alt="Unsplash background image woodpanel texture">
-    <div id="content" >
-	<!-- WHY ARE YOU HERE MORTAL ??? -->
-        I am Bakufu
-    <div>
-    <a href="https://www.twitch.tv/bakufutv" alt="Link to BakufuTV Twitch channel" target="blank">
-    <img src="twitch512.png" alt="Twitch icon" align="center" width="52" height="52"></a><br>
-    <a href="https://www.youtube.com/@bakufutv" alt="Link to BakufuTV Youtube channel" target="blank">
-    <img src="youtube512.png" alt="Youtube icon" align="center" width="52" height="52"></a>
+  <img id="background-image" src="woods.jpg" alt="Wood texture background" />
+  <div id="content">
+    I am Bakufu
+    <div class="social-icons">
+      <a href="https://www.twitch.tv/bakufutv" target="_blank" rel="noopener noreferrer">
+        <img src="twitch512.png" alt="Twitch icon" />
+      </a>
+      <a href="https://www.youtube.com/@bakufutv" target="_blank" rel="noopener noreferrer">
+        <img src="youtube512.png" alt="YouTube icon" />
+      </a>
     </div>
-    </div>
-
+  </div>
 </body>
 </html>
